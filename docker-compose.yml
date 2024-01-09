@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  easyqr:
+    container_name: easyqr
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=easyqr
+    image: postgres:16.1-alpine
